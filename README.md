@@ -18,8 +18,10 @@ Haremos una Landing Page tanto para Web como para Mobile usando SASS y BEM.
 2. [Introducción a BEM](#2-introducción-a-bem)
 3. [Después de clonar el repositorio...](#3-después-de-clonar-el-repositorio)
 4. [Conozcamos la estructura de nuestra Landing Page](#4-conozcamos-la-estructura-de-nuestra-landing-page)
-4.1. [Landing Page | Diseño Web](#4.1-landing-page-diseño-web)
-4.2. [Landing Page | Diseño Móvil](#4.2-landing-page-diseño-móvil)
+5. [Definición de elementos](#5-definición-de-elementos)
+6. [Navbar](#6-navbar)
+7. [Header](#7-header)
+11. [Footer](#10-footer)
 
 ## 1. Introducción a SASS (Syntactically Awesome StyleSheets)
 
@@ -38,14 +40,42 @@ Después de clonar el repositorio encontrarás dos carpetas: inicial y final. T�
 
 Aquí te presentamos la estructura de nuestra Landing Page. Para este caso, escogimos una página de animales pero tú puedes hacerla del tema que quieras: motos, carros, maquillaje, ropa, fitness... e inclusive, tu propia página web. 
 
-### 4.1. Landing Page | Diseño Web
+* ## Landing Page | Diseño Web
 
-> Link: https://goo.gl/Qbngyz
+> Mockup Link: https://goo.gl/Qbngyz
 
-<img src="./readme-landing-web.gif" alt="Landing Page Web"/>
+<img src="./readme-assets/landing-web.gif" alt="Landing Page Web" width="500" />
 
-### 4.2. Landing Page | Diseño Móvil
+* ## Landing Page | Diseño Móvil
 
-> Link: https://goo.gl/gGkwDq
+> Mockup Link: https://goo.gl/gGkwDq
 
-<img src="./readme-landing-mobile.gif" alt="Landing Page Mobile"/>
+<img src="./readme-assets/landing-mobile.gif" alt="Landing Page Mobile" width="500" />
+
+## 5. Definición de elementos
+
+Para comenzar a maquetar nuestra Landing Page es importante poder reconocer los elementos que allí se encuentran. Es decir, si tiene navbar, header, secciones, imágenes, footer, etc.
+
+* ## Definición de elementos: Landing Page | Diseño Web
+
+* ## Definición de elementos: Landing Page | Diseño Móvil
+
+## 6. Navbar 
+
+<img src="./readme-assets/navbar.png" alt="Navbar" />
+
+## 7. Header 
+
+<img src="./readme-assets/header.png" alt="Header" />
+
+## 8. Search 
+
+<img src="./readme-assets/search.png" alt="Search" />
+
+## 9. Sections | Diseño Web
+
+## 9. Sections | Diseño Móvil
+
+## 11. Footer 
+
+<img src="./readme-assets/footer.png" alt="Footer" />
