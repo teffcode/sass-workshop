@@ -19,14 +19,20 @@ Haremos una Landing Page tanto para Web como para Mobile usando SASS y BEM.
 3. [Después de clonar el repositorio...](#3-después-de-clonar-el-repositorio)
 4. [Conozcamos la estructura de nuestra Landing Page](#4-conozcamos-la-estructura-de-nuestra-landing-page)
 5. [Definición de elementos](#5-definición-de-elementos)
-6. [Navbar](#6-navbar)
-7. [Header](#7-header)
-11. [Footer](#10-footer)
+6. [Instalación de SASS](#6-instalación-de-sass)
+7. [Variables: Paleta de colores y fuentes](#7-variables-paleta-de-colores-y-fuentes)
+8. [Navbar](#8-navbar)
+9. [Header](#9-header)
+13. [Footer](#13-footer)
 
 ## 1. Introducción a SASS (Syntactically Awesome StyleSheets)
 
+SASS es un preprocesador de CSS y nos permite escribir CSS con unas pequeñas modificaciones: podemos hacer variables, extender estilos de otras clases, hacer anidamientos, utilizar condicionales, entre otros. 
+
+Aquí te compartimos algunos recursos:
+
 * Documentación oficial: https://sass-lang.com/
-* Hoja de trucos: https://devhints.io/sass
+* Cheatsheet: https://devhints.io/sass
 
 ## 2. Introducción a BEM (Block, Element, Modifier)
 
@@ -60,22 +66,121 @@ Para comenzar a maquetar nuestra Landing Page es importante poder reconocer los 
 
 * ## Definición de elementos: Landing Page | Diseño Móvil
 
-## 6. Navbar 
+## 6. Instalación de SASS 
+
+Lo primero que debes saber es que *no* puedes insertar directamente un archivo `.scss` en un archivo `.html`.
+
+¿Por qué? 
+
+Porque SASS al ser un preprocesador de CSS3 y no es soportado en los navegadores web.
+
+Entonces los pasos a seguir son: 
+
+* Instalación de SASS en tu computador con npm: `npm install -g sass`
+> Nota: Puedes mirar otras opciones de instalación aquí: https://sass-lang.com/install
+
+* Escribir en tu consola: `sass --watch tu-ruta/sass-workshop/initial/styles.scss tu-ruta/sass-workshop/initial/styles/index.css`
+> Nota: "tu-ruta" es el lugar en tu computador en donde clonaste el repositorio. Un ejemplo puede ser: /Users/PepitaPerez/Documentos/... 
+
+* Notarás que se crea un archivo `styles.css.map` 
+
+## 7. Variables: Paleta de colores y fuentes
+
+Las variables en SASS son un camino para almacenar información y poder reutilizarla. 
+
+En nuetro caso, la paleta de colores es: 
+
+* Verde: #99DDCC
+* Rosado: #FA91A7
+* Amarillo: #D9E540
+* Blanco: #FFF
+
+y, la fuente que usaremos se llama: Roboto. 
+
+> Nota: Recuerda que puedes escoger los colores y las fuentes que desees. 
+
+Lo que haremos para definir estas *variables* en nuestro archivo `styles.scss` es escribir lo siguiente:
+
+```
+$green: #99DDCC;
+$pink: #FA91A7;
+$yellow: #D9E540;
+$white: #FFF;
+$font-arial: arial;
+```
+
+## 8. Navbar 
+
+* Imagen del mockup:
 
 <img src="./readme-assets/navbar.png" alt="Navbar" />
 
-## 7. Header 
+Podemos notar que nuestro Navbar debe ocupar todo el ancho de nuestra página (tanto en web como en mobile), un largo de 80px y que además tiene un texto en mayúscula y centrado. Así que:
+
+* En el archivo HTML escribiremos lo siguiente:
+
+```
+<nav class="navbar">Medellín CSS</nav>
+```
+
+* En el archivo SCSS escribiremos lo siguiente:
+
+```
+.navbar {
+  background-color: $green;
+  color: $white;
+  width: 100%;
+  height: 80px;
+  text-transform: uppercase;
+  font-family: $font-arial;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+Puedes notar que tenemos: `font-family`, `font-size`, `font-weight` y con SASS podemos escribir eso así:
+```
+font: {
+    family: $font-arial;
+    size: 18px;
+    weight: bold;
+}
+```
+Así que nuestra clase `.navbar` quedaría:
+```
+.navbar {
+  background-color: $green;
+  color: $white;
+  width: 100%;
+  height: 80px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: {
+    family: $font-arial;
+    size: 18px;
+    weight: bold;
+  }
+}
+```
+
+## 9. Header 
 
 <img src="./readme-assets/header.png" alt="Header" />
 
-## 8. Search 
+## 10. Search 
 
 <img src="./readme-assets/search.png" alt="Search" />
 
-## 9. Sections | Diseño Web
+## 11. Sections | Diseño Web
 
-## 9. Sections | Diseño Móvil
+## 12. Sections | Diseño Móvil
 
-## 11. Footer 
+## 13. Footer 
 
 <img src="./readme-assets/footer.png" alt="Footer" />
