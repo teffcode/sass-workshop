@@ -7,20 +7,35 @@ $font-arial: arial;
 body {
   margin: 0;
   padding: 0;
+  font-family: $font-arial;
+}
+
+// General Styles
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.size-container {
+  width: 100%;
+  height: 80px;
+}
+
+.letter-transform {
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 // Header 
 
 .header {
+  @extend .center;
+  @extend .size-container;
+  @extend .letter-transform;
   background-color: $green;
   color: $white;
-  width: 100%;
-  height: 80px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font: {
     family: $font-arial;
     size: 18px;
@@ -41,15 +56,11 @@ body {
 
 .search-section {
   &-title {
+    @extend .center;
+    @extend .size-container;
+    @extend .letter-transform;
     background-color: $green;
     color: $white;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
     font: {
       family: $font-arial;
       size: 18px;
@@ -57,19 +68,42 @@ body {
   }
   &-input {
     background-color: $white;
-    width: 100%;
-    height: 80px;
     display: grid;
     grid-template-columns: 60px auto;
     justify-items: center;
     align-items: center;
     input {
+      @extend .size-container;
       border: 0px;
-      width: 100%;
-      height: 90%;
       outline: none;
       font-size: 18px;
       letter-spacing: 5px;
+    }
+  }
+}
+
+// Crab Section
+
+
+// Cat Section
+
+
+// Footer
+
+.footer {
+  @extend .center;
+  @extend .size-container;
+  @extend .letter-transform;
+  background-color: $white;
+  color: $pink;
+  font: {
+    size: 15px;
+    weight: bold;
+  }
+  p {
+    text-align: center;
+    span {
+      color: $green;
     }
   }
 }

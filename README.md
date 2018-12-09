@@ -173,6 +173,66 @@ Así que nuestra clase `.header` quedaría:
 }
 ```
 
+Sin embargo, si pensamos a futuro vamos a notar que necesitaremos centrar elementos usando `display: flex`, por lo que sería útil hacer una clase que centre elementos y así poderla reutilizar más adelante. Por lo tanto, crearemos una clase llamada `.center` con lo siguiente:
+
+```
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+
+Y, en nuestra clase `.header` vamos a heredar de `.center` usando `@extend` así:
+
+```
+.header {
+  @extend .center;
+  background-color: $green;
+  color: $white;
+  width: 100%;
+  height: 80px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font: {
+    family: $font-arial;
+    size: 18px;
+    weight: bold;
+  }
+}
+```
+
+También podemos sacar dos clases más para poderlas reutilizar más adelante:
+
+```
+.size-container {
+  width: 100%;
+  height: 80px;
+}
+
+.letter-transform {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+```
+
+Finalmente, nuestra clase `.header` quedaría:
+
+```
+.header {
+  @extend .center;
+  @extend .size-container;
+  @extend .letter-transform;
+  background-color: $green;
+  color: $white;
+  font: {
+    family: $font-arial;
+    size: 18px;
+    weight: bold;
+  }
+}
+```
+
 ## 9. Main Section 
 
 * Imagen del mockup:
@@ -182,6 +242,9 @@ Así que nuestra clase `.header` quedaría:
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
+<section class="main-section">
+  <img src="./assets/main-image.png" alt="Main Image">
+</section>
 ```
 
 * En el archivo SCSS escribiremos lo siguiente:
@@ -198,18 +261,52 @@ Así que nuestra clase `.header` quedaría:
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
+<section class="search-section">
+  <div class="search-section-title">Search</div>
+  <div class="search-section-input">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="SEARCH YOUR ANIMAL">
+  </div>
+</section>
 ```
 
-El ícono lo puedes sacar de Font Awesome y para ello debes copiar dentro de la etiqueta `<head>` de tu HTML lo siguiente: `<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">`
+El ícono lo puedes sacar de Font Awesome y para ello debes copiar dentro de la etiqueta `<head>` de tu HTML el enlace que te muestra la siguiente documentación: https://fontawesome.com/start 
 
-Y escoger el ícono que más te guste aquí: https://fontawesome.com/icons?d=gallery
+Y ya puedes escoger el ícono que más te guste aquí: https://fontawesome.com/icons?d=gallery
 
 * En el archivo SCSS escribiremos lo siguiente:
 
 ```
+.search-section {
+  &-title {
+    @extend .center;
+    @extend .size-container;
+    @extend .letter-transform;
+    background-color: $green;
+    color: $white;
+    font: {
+      family: $font-arial;
+      size: 18px;
+    }
+  }
+  &-input {
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 60px auto;
+    justify-items: center;
+    align-items: center;
+    input {
+      @extend .size-container;
+      border: 0px;
+      outline: none;
+      font-size: 18px;
+      letter-spacing: 5px;
+    }
+  }
+}
 ```
 
-## 11. Sections | Diseño Web
+## 11. Crab Section 
 
 * Imagen del mockup:
 * En el archivo HTML escribiremos lo siguiente:
@@ -222,7 +319,7 @@ Y escoger el ícono que más te guste aquí: https://fontawesome.com/icons?d=gal
 ```
 ```
 
-## 12. Sections | Diseño Móvil
+## 12. Cat Section
 
 * Imagen del mockup:
 * En el archivo HTML escribiremos lo siguiente:
@@ -244,9 +341,31 @@ Y escoger el ícono que más te guste aquí: https://fontawesome.com/icons?d=gal
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
+<footer class="footer">
+  <p>
+    <span>Created by</span><br>@myuser
+  </p>
+</footer>
 ```
 
 * En el archivo SCSS escribiremos lo siguiente:
 
 ```
+.footer {
+  @extend .center;
+  @extend .size-container;
+  @extend .letter-transform;
+  background-color: $white;
+  color: $pink;
+  font: {
+    size: 15px;
+    weight: bold;
+  }
+  p {
+    text-align: center;
+    span {
+      color: $green;
+    }
+  }
+}
 ```
