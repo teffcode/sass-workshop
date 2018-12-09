@@ -3,7 +3,7 @@ body {
   padding: 0;
 }
 
-.navbar {
+.header {
   background-color: #99DDCC;
   color: #FFF;
   width: 100%;
@@ -16,6 +16,42 @@ body {
   font-family: arial;
   font-size: 18px;
   font-weight: bold;
+}
+
+.main-section img {
+  width: 100%;
+  height: 100%;
+}
+
+.search-section-title {
+  background-color: #99DDCC;
+  color: #FFF;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: arial;
+  font-size: 18px;
+}
+.search-section-input {
+  background-color: #FFF;
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 60px auto;
+  justify-items: center;
+  align-items: center;
+}
+.search-section-input input {
+  border: 0px;
+  width: 100%;
+  height: 90%;
+  outline: none;
+  font-size: 18px;
+  letter-spacing: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

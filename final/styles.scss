@@ -9,7 +9,9 @@ body {
   padding: 0;
 }
 
-.navbar {
+// Header 
+
+.header {
   background-color: $green;
   color: $white;
   width: 100%;
@@ -23,5 +25,51 @@ body {
     family: $font-arial;
     size: 18px;
     weight: bold;
+  }
+}
+
+// Main Section
+
+.main-section {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Search Section
+
+.search-section {
+  &-title {
+    background-color: $green;
+    color: $white;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font: {
+      family: $font-arial;
+      size: 18px;
+    }
+  }
+  &-input {
+    background-color: $white;
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 60px auto;
+    justify-items: center;
+    align-items: center;
+    input {
+      border: 0px;
+      width: 100%;
+      height: 90%;
+      outline: none;
+      font-size: 18px;
+      letter-spacing: 5px;
+    }
   }
 }

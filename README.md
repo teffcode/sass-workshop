@@ -1,4 +1,4 @@
-<img src="./readme-title.png" alt="readme-title" width="100%"/>
+<img src="./readme-assets/title.png" alt="readme-title" width="100%"/>
 
 ## ¿ Qué haremos ?
 
@@ -21,8 +21,8 @@ Haremos una Landing Page tanto para Web como para Mobile usando SASS y BEM.
 5. [Definición de elementos](#5-definición-de-elementos)
 6. [Instalación de SASS](#6-instalación-de-sass)
 7. [Variables: Paleta de colores y fuentes](#7-variables-paleta-de-colores-y-fuentes)
-8. [Navbar](#8-navbar)
-9. [Header](#9-header)
+8. [Header](#8-header)
+9. [Main Section](#9-main-section)
 13. [Footer](#13-footer)
 
 ## 1. Introducción a SASS (Syntactically Awesome StyleSheets)
@@ -109,24 +109,24 @@ $white: #FFF;
 $font-arial: arial;
 ```
 
-## 8. Navbar 
+## 8. Header 
 
 * Imagen del mockup:
 
-<img src="./readme-assets/navbar.png" alt="Navbar" />
+<img src="./readme-assets/header.png" alt="Navbar" />
 
-Podemos notar que nuestro Navbar debe ocupar todo el ancho de nuestra página (tanto en web como en mobile), un largo de 80px y que además tiene un texto en mayúscula y centrado. Así que:
+Podemos notar que nuestro Header debe ocupar todo el ancho de nuestra página (tanto en web como en mobile), un largo de 80px y que además tiene un texto en mayúscula y centrado. Así que:
 
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
-<nav class="navbar">Medellín CSS</nav>
+<nav class="header">Medellín CSS</nav>
 ```
 
 * En el archivo SCSS escribiremos lo siguiente:
 
 ```
-.navbar {
+.header {
   background-color: $green;
   color: $white;
   width: 100%;
@@ -141,7 +141,9 @@ Podemos notar que nuestro Navbar debe ocupar todo el ancho de nuestra página (t
   justify-content: center;
 }
 ```
+
 Puedes notar que tenemos: `font-family`, `font-size`, `font-weight` y con SASS podemos escribir eso así:
+
 ```
 font: {
     family: $font-arial;
@@ -149,9 +151,11 @@ font: {
     weight: bold;
 }
 ```
-Así que nuestra clase `.navbar` quedaría:
+
+Así que nuestra clase `.header` quedaría:
+
 ```
-.navbar {
+.header {
   background-color: $green;
   color: $white;
   width: 100%;
@@ -169,18 +173,80 @@ Así que nuestra clase `.navbar` quedaría:
 }
 ```
 
-## 9. Header 
+## 9. Main Section 
 
-<img src="./readme-assets/header.png" alt="Header" />
+* Imagen del mockup:
 
-## 10. Search 
+<img src="./readme-assets/main-section.png" alt="Main Section" />
+
+* En el archivo HTML escribiremos lo siguiente:
+
+```
+```
+
+* En el archivo SCSS escribiremos lo siguiente:
+
+```
+```
+
+## 10. Search Section
+
+* Imagen del mockup:
 
 <img src="./readme-assets/search.png" alt="Search" />
 
+* En el archivo HTML escribiremos lo siguiente:
+
+```
+```
+
+El ícono lo puedes sacar de Font Awesome y para ello debes copiar dentro de la etiqueta `<head>` de tu HTML lo siguiente: `<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">`
+
+Y escoger el ícono que más te guste aquí: https://fontawesome.com/icons?d=gallery
+
+* En el archivo SCSS escribiremos lo siguiente:
+
+```
+```
+
 ## 11. Sections | Diseño Web
+
+* Imagen del mockup:
+* En el archivo HTML escribiremos lo siguiente:
+
+```
+```
+
+* En el archivo SCSS escribiremos lo siguiente:
+
+```
+```
 
 ## 12. Sections | Diseño Móvil
 
+* Imagen del mockup:
+* En el archivo HTML escribiremos lo siguiente:
+
+```
+```
+
+* En el archivo SCSS escribiremos lo siguiente:
+
+```
+```
+
 ## 13. Footer 
 
+* Imagen del mockup:
+
 <img src="./readme-assets/footer.png" alt="Footer" />
+
+* En el archivo HTML escribiremos lo siguiente:
+
+```
+```
+
+* En el archivo SCSS escribiremos lo siguiente:
+
+```
+```
