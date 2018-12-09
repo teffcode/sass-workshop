@@ -14,8 +14,8 @@ Haremos una Landing Page tanto para Web como para Mobile usando SASS y BEM.
 
 # Comencemos con nuestra Landing Page !
 
-1. [Introducción a SASS](#1-introducción-a-sass)
-2. [Introducción a BEM](#2-introducción-a-bem)
+1. [Introducción a SASS](#1-introducción-a-sass-syntactically-awesome-stylesheets)
+2. [Introducción a BEM](#2-introducción-a-bem-block-element-modifier)
 3. [Después de clonar el repositorio...](#3-después-de-clonar-el-repositorio)
 4. [Conozcamos la estructura de nuestra Landing Page](#4-conozcamos-la-estructura-de-nuestra-landing-page)
 5. [Definición de elementos](#5-definición-de-elementos)
