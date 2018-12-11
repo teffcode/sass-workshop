@@ -20,6 +20,11 @@ body {
   letter-spacing: 5px;
 }
 
+.description, .crab-section-4, .crab-section-2 {
+  background-color: #99DDCC;
+  color: #FFF;
+}
+
 .header {
   background-color: #99DDCC;
   color: #FFF;
@@ -51,6 +56,32 @@ body {
   outline: none;
   font-size: 18px;
   letter-spacing: 5px;
+}
+
+.crab-section {
+  width: 100%;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr 1fr 1fr 2fr;
+}
+.crab-section img {
+  width: 100%;
+  height: 100%;
+}
+.crab-section-1 {
+  grid-row: 1/4;
+}
+.crab-section-2 {
+  grid-column: 2;
+  grid-row: 1/2;
+}
+.crab-section-3 {
+  grid-column: 2;
+  grid-row: 2/5;
+}
+.crab-section-4 {
+  grid-row: 4/5;
 }
 
 .footer {

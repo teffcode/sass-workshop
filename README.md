@@ -308,7 +308,34 @@ Y ya puedes escoger el ícono que más te guste aquí: https://fontawesome.com/i
 
 ## 11. Crab Section 
 
+Esta sección debemos pensarla tanto para dispositivos web como para mobile. Vamos a notar que hay un pequeño cambio en los tamaños de las imágenes y descripciones. 
+
+Con *CSS Grid* haremos una cuadrícula imaginaria como la que vemos a continuación:
+
 * Imagen del mockup:
+
+<img src="./readme-assets/crab-section.png" alt="Crab Section" />
+
+Lo que va a cambiar será la ubicación de los elementos en las diferentes filas. Así:
+
+En Web:
+
+|  Column 1 |  Column 2 |   |  
+|---|---|---|
+| Imagen Cangrejo | Descripción Mariposa | **Row 1** |  
+| Imagen Cangrejo | Imagen Mariposa | **Row 2** |  
+| Imagen Cangrejo | Imagen Mariposa | **Row 3** |  
+| Descripción Mariposa | Imagen Mariposa  | **Row 4** |  
+
+En Mobile:
+
+|  Column 1 |  Column 2 |   |  
+|---|---|---|
+| Imagen Cangrejo | Descripción Mariposa | **Row 1** |  
+| Imagen Cangrejo | Descripción Mariposa | **Row 2** |  
+| Descripción Mariposa | Imagen Mariposa | **Row 3** |  
+| Descripción Mariposa | Imagen Mariposa  | **Row 4** |  
+
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
