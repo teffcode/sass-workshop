@@ -349,6 +349,11 @@ En Mobile:
 ## 12. Cat Section
 
 * Imagen del mockup:
+
+<img src="./readme-assets/cat-section-web.png" alt="Cat Section Web" />
+
+<img src="./readme-assets/cat-section-mobile.png" alt="Cat Section Mobile" />
+
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
