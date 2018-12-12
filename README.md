@@ -242,7 +242,7 @@ Finalmente, nuestra clase `.header` quedaría:
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
-<section class="main-section">
+<section class="main">
   <img src="./assets/main-image.png" alt="Main Image">
 </section>
 ```
@@ -250,6 +250,12 @@ Finalmente, nuestra clase `.header` quedaría:
 * En el archivo SCSS escribiremos lo siguiente:
 
 ```
+.main {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
 ```
 
 ## 10. Search Section
@@ -261,24 +267,22 @@ Finalmente, nuestra clase `.header` quedaría:
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
-<section class="search-section">
-  <div class="search-section-title">Search</div>
-  <div class="search-section-input">
+<section class="search">
+  <div class="search__title">Search</div>
+  <div class="search__input">
     <i class="fas fa-search"></i>
     <input type="text" placeholder="SEARCH YOUR ANIMAL">
   </div>
 </section>
 ```
 
-El ícono lo puedes sacar de Font Awesome y para ello debes copiar dentro de la etiqueta `<head>` de tu HTML el enlace que te muestra la siguiente documentación: https://fontawesome.com/start 
-
-Y ya puedes escoger el ícono que más te guste aquí: https://fontawesome.com/icons?d=gallery
+El ícono lo puedes sacar de Font Awesome. Puedes escoger el ícono que más te guste aquí: https://fontawesome.com/icons?d=gallery
 
 * En el archivo SCSS escribiremos lo siguiente:
 
 ```
-.search-section {
-  &-title {
+.search {
+  &__title {
     @extend .center;
     @extend .size-container;
     @extend .letter-transform;
@@ -289,7 +293,7 @@ Y ya puedes escoger el ícono que más te guste aquí: https://fontawesome.com/i
       size: 18px;
     }
   }
-  &-input {
+  &__input {
     background-color: $white;
     display: grid;
     grid-template-columns: 60px auto;
@@ -306,7 +310,7 @@ Y ya puedes escoger el ícono que más te guste aquí: https://fontawesome.com/i
 }
 ```
 
-## 11. Crab Section 
+## 11. Primary Section 
 
 Esta sección debemos pensarla tanto para dispositivos web como para mobile. Vamos a notar que hay un pequeño cambio en los tamaños de las imágenes y descripciones. 
 
@@ -339,14 +343,68 @@ En Mobile:
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
+<section class="ps">
+  <img class="ps__img--primary" src="./assets/crab.png" alt="Crab">
+  <div class="ps__description--primary">
+    <p>Cangrejos<br>para todos</p>
+  </div>
+  <img class="ps__img--secondary" src="./assets/butterfly.png" alt="Butterfly">
+  <div class="ps__description--secondary">
+    <p>Mariposas</p>
+  </div>
+</section>
 ```
 
 * En el archivo SCSS escribiremos lo siguiente:
 
 ```
+.ps {
+  width: 100%;
+  height: 900px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr 1fr 1fr 2fr;
+  @media screen and (max-width: $break-small) {
+    height: 500px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  &__img--primary {
+    grid-row: 1/4;
+    @media screen and (max-width: $break-small) {
+      grid-row: 1/3;
+    }
+  }
+  &__description--primary {
+    @extend .description;
+    grid-column: 2;
+    grid-row: 1/2;
+    @media screen and (max-width: $break-small) {
+      grid-column: 2;
+      grid-row: 1/3;
+    }
+  }
+  &__img--secondary {
+    grid-column: 2;
+    grid-row: 2/5;
+    @media screen and (max-width: $break-small) {
+      grid-column: 2;
+      grid-row: 3/5;
+    }
+  }
+  &__description--secondary {
+    @extend .description;
+    grid-row: 4/5;
+    @media screen and (max-width: $break-small) {
+      grid-row: 3/5;
+    }
+  }
+}
 ```
 
-## 12. Cat Section
+## 12. Secondary Section
 
 * Imagen del mockup:
 
@@ -357,11 +415,69 @@ En Mobile:
 * En el archivo HTML escribiremos lo siguiente:
 
 ```
+<section class="ss">
+  <img class="ss__img--primary" src="./assets/cat.png" alt="Cat">
+  <div class="ss__container">
+    <div class="ss__description--primary">
+      <p>Gatos<br>Majestuosos</p>
+    </div>
+    <img class="ss__img--secondary" src="./assets/deer.png" alt="Deer">
+    <div class="ss__description--secondary">
+      <p>Ciervooos</p>
+    </div>
+  </div>
+</section>
 ```
 
 * En el archivo SCSS escribiremos lo siguiente:
 
 ```
+.ss {
+  width: 100%;
+  height: 900px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  @media screen and (max-width: $break-small) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 450px);
+  }
+  img {
+    width: 100%;
+  }
+  &__img--primary {
+    height: 100%;    
+  }
+  &__container {
+    display: grid;
+    grid-template-rows: repeat(3, 300px);
+    @media screen and (max-width: $break-small) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 225px);
+    }
+  }
+  &__description--primary {
+    @extend .description;
+    @media screen and (max-width: $break-small) {
+      grid-column: 1/3;
+    }
+  }
+  &__img--secondary {
+    @extend .description;
+    height: 100%;
+    @media screen and (max-width: $break-small) {
+      height: 50%;
+      grid-column: 1/2;
+      grid-row: 2;
+    }
+  }
+  &__description--secondary {
+    @extend .description;
+    @media screen and (max-width: $break-small) {
+      grid-column: 2/3;
+      grid-row: 2;
+    }
+  }
+}
 ```
 
 ## 13. Footer 
