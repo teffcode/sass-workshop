@@ -23,6 +23,9 @@ Haremos una Landing Page tanto para Web como para Mobile usando SASS y BEM.
 7. [Variables: Paleta de colores y fuentes](#7-variables-paleta-de-colores-y-fuentes)
 8. [Header](#8-header)
 9. [Main Section](#9-main-section)
+10. [Search Section](#10-search-section)
+11. [Primary Section](#11-primary-section)
+12. [Secondary Section](#12-secondary-section)
 13. [Footer](#13-footer)
 
 ## 1. Introducción a SASS (Syntactically Awesome StyleSheets)
@@ -36,7 +39,9 @@ Aquí te compartimos algunos recursos:
 
 ## 2. Introducción a BEM (Block, Element, Modifier)
 
-* Documentación: https://en.bem.info/methodology/quick-start/
+BEM es una convención de nomenclatura para los nombres de nuestras clases en CSS. 
+
+* Documentación: https://seesparkbox.com/foundry/bem_by_example
 
 ## 3. Después de clonar el repositorio...
 
@@ -62,9 +67,11 @@ Aquí te presentamos la estructura de nuestra Landing Page. Para este caso, esco
 
 Para comenzar a maquetar nuestra Landing Page es importante poder reconocer los elementos que allí se encuentran. Es decir, si tiene navbar, header, secciones, imágenes, footer, etc.
 
-* ## Definición de elementos: Landing Page | Diseño Web
+Este es un paso fundamental ya que te ayudará a conocer mejor el proyecto que vas a realizar y también puedes empezar a detectar si trabajarás con flexbox, css grid, boostrap, material design, etc. Es decir, empezarás a levantar requisitos. Además te ayudará a estructurar y tener una visión más clara de tu HTML.
 
-* ## Definición de elementos: Landing Page | Diseño Móvil
+<img src="./readme-assets/elements-landing-page.png" alt="Elements Landing Page" width="500"/>
+
+Como pudiste ver, tendremos: Header, Main Section, Search Section, Primary Section, Secondary Section y Footer. Estos elementos serán nuestros pequeños bloques de HTML.
 
 ## 6. Instalación de SASS 
 
@@ -72,17 +79,29 @@ Lo primero que debes saber es que *no* puedes insertar directamente un archivo `
 
 ¿Por qué? 
 
-Porque SASS al ser un preprocesador de CSS3 y no es soportado en los navegadores web.
+Porque SASS al ser un preprocesador de CSS3 y no es soportado en los navegadores web. Por lo tanto, los pasos a seguir son: 
 
-Entonces los pasos a seguir son: 
+### 1. Instalación de SASS en tu computador.
 
-* Instalación de SASS en tu computador con npm: `npm install -g sass`
-> Nota: Puedes mirar otras opciones de instalación aquí: https://sass-lang.com/install
+* Si usas **npm** debes poner en tu consola: `npm install -g sass`
+* Si usas **Chocolatey Package Manager** (Windows) debes poner en tu consola: `choco install sass`
+* Si eres MAC OS X debes poner en tu consola: `brew install sass/sass/sass`
 
-* Escribir en tu consola: `sass --watch tu-ruta/sass-workshop/initial/styles.scss tu-ruta/sass-workshop/initial/styles/index.css`
-> Nota: "tu-ruta" es el lugar en tu computador en donde clonaste el repositorio. Un ejemplo puede ser: /Users/PepitaPerez/Documentos/... 
+> Documentación oficial: https://sass-lang.com/install
 
-* Notarás que se crea un archivo `styles.css.map` 
+### 2. Correr el proyecto con SASS
+
+Para poder visualizar tus proyectos de sass en el navegador, debes escribir en tu consola: `sass --watch tu-ruta/sass-workshop/initial/styles.scss tu-ruta/sass-workshop/initial/styles/index.css`
+
+* > Nota 1: "tu-ruta" es el lugar en tu computador en donde clonaste el repositorio. Un ejemplo puede ser: /Users/PepitaPerez/Documentos/... es decir que lo que deberías escribir en tu consola es: `sass --watch /Users/PepitaPerez/Documentos/sass-workshop/initial/styles.scss /Users/PepitaPerez/Documentos/sass-workshop/initial/styles/index.css`
+
+* > Nota 2: La ruta de tu proyecto la puedes conseguir haciendo `pwd` en tu consola.  Si eres Windows con el comando `cd`
+
+### 3. Ver tu proyecto en el navegador
+
+Al correr el comando anterior, notarás en tu código que se crea un archivo `styles.css.map`. Si sí, ya puedes ir a tu navegador y poner la ruta del `index.html` de tu proyecto.
+
+Siguiendo la línea del ejemplo anterior, deberías poner: `file:///Users/PepitaPerez/Documentos/sass-workshop/initial/index.html`
 
 ## 7. Variables: Paleta de colores y fuentes
 
@@ -403,6 +422,8 @@ En Mobile:
   }
 }
 ```
+
+Donde `$break-small` será otra variable junto a nuestra paleta de colores con el valor: `800px`.
 
 ## 12. Secondary Section
 
