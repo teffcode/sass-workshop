@@ -95,7 +95,7 @@ En nuetro caso, la paleta de colores es:
 * Amarillo: #D9E540
 * Blanco: #FFF
 
-y, la fuente que usaremos se llama: Roboto. 
+y, la fuente que usaremos será **Arial**. 
 
 > Nota: Recuerda que puedes escoger los colores y las fuentes que desees. 
 
@@ -350,9 +350,9 @@ En Mobile:
 
 * Imagen del mockup:
 
-<img src="./readme-assets/cat-section-web.png" alt="Cat Section Web" />
+<img src="./readme-assets/cat-section-web.png" alt="Cat Section Web" width="500" />
 
-<img src="./readme-assets/cat-section-mobile.png" alt="Cat Section Mobile" />
+<img src="./readme-assets/cat-section-mobile.png" alt="Cat Section Mobile" width="500" />
 
 * En el archivo HTML escribiremos lo siguiente:
 

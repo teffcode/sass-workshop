@@ -4,23 +4,23 @@ body {
   font-family: arial;
 }
 
-.center, .footer, .search-section-title, .header {
+.center, .footer, .search__title, .header {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.size-container, .footer, .search-section-input input, .search-section-title, .header {
+.size-container, .footer, .search__input input, .search__title, .header {
   width: 100%;
   height: 80px;
 }
 
-.letter-transform, .footer, .search-section-title, .header {
+.letter-transform, .footer, .search__title, .header {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 
-.description, .cat-section-2-3, .cat-section-2-2, .cat-section-2-1, .crab-section-4, .crab-section-2 {
+.description, .ss__description--secondary, .ss__img--secondary, .ss__description--primary, .ps__description--secondary, .ps__description--primary {
   background-color: #99DDCC;
   color: #FFF;
 }
@@ -33,129 +33,129 @@ body {
   font-weight: bold;
 }
 
-.main-section img {
+.main img {
   width: 100%;
   height: 100%;
 }
 
-.search-section-title {
+.search__title {
   background-color: #99DDCC;
   color: #FFF;
   font-family: arial;
   font-size: 18px;
 }
-.search-section-input {
+.search__input {
   background-color: #FFF;
   display: grid;
   grid-template-columns: 60px auto;
   justify-items: center;
   align-items: center;
 }
-.search-section-input input {
+.search__input input {
   border: 0px;
   outline: none;
   font-size: 18px;
   letter-spacing: 5px;
 }
 
-.crab-section {
+.ps {
   width: 100%;
   height: 900px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr 1fr 1fr 2fr;
 }
-@media screen and (max-width: 500px) {
-  .crab-section {
+@media screen and (max-width: 800px) {
+  .ps {
     height: 500px;
   }
 }
-.crab-section img {
+.ps img {
   width: 100%;
   height: 100%;
 }
-.crab-section-1 {
+.ps__img--primary {
   grid-row: 1/4;
 }
-@media screen and (max-width: 500px) {
-  .crab-section-1 {
+@media screen and (max-width: 800px) {
+  .ps__img--primary {
     grid-row: 1/3;
   }
 }
-.crab-section-2 {
+.ps__description--primary {
   grid-column: 2;
   grid-row: 1/2;
 }
-@media screen and (max-width: 500px) {
-  .crab-section-2 {
+@media screen and (max-width: 800px) {
+  .ps__description--primary {
     grid-column: 2;
     grid-row: 1/3;
   }
 }
-.crab-section-3 {
+.ps__img--secondary {
   grid-column: 2;
   grid-row: 2/5;
 }
-@media screen and (max-width: 500px) {
-  .crab-section-3 {
+@media screen and (max-width: 800px) {
+  .ps__img--secondary {
     grid-column: 2;
     grid-row: 3/5;
   }
 }
-.crab-section-4 {
+.ps__description--secondary {
   grid-row: 4/5;
 }
-@media screen and (max-width: 500px) {
-  .crab-section-4 {
+@media screen and (max-width: 800px) {
+  .ps__description--secondary {
     grid-row: 3/5;
   }
 }
 
-.cat-section {
+.ss {
   width: 100%;
   height: 900px;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
-@media screen and (max-width: 500px) {
-  .cat-section {
+@media screen and (max-width: 800px) {
+  .ss {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 450px);
   }
 }
-.cat-section img {
+.ss img {
   width: 100%;
 }
-.cat-section-1 {
+.ss__img--primary {
   height: 100%;
 }
-.cat-section-2 {
+.ss__container {
   display: grid;
   grid-template-rows: repeat(3, 300px);
 }
-@media screen and (max-width: 500px) {
-  .cat-section-2 {
+@media screen and (max-width: 800px) {
+  .ss__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 225px);
   }
 }
-@media screen and (max-width: 500px) {
-  .cat-section-2-1 {
+@media screen and (max-width: 800px) {
+  .ss__description--primary {
     grid-column: 1/3;
   }
 }
-.cat-section-2-2 {
+.ss__img--secondary {
   height: 100%;
 }
-@media screen and (max-width: 500px) {
-  .cat-section-2-2 {
+@media screen and (max-width: 800px) {
+  .ss__img--secondary {
     height: 50%;
     grid-column: 1/2;
     grid-row: 2;
   }
 }
-@media screen and (max-width: 500px) {
-  .cat-section-2-3 {
+@media screen and (max-width: 800px) {
+  .ss__description--secondary {
     grid-column: 2/3;
     grid-row: 2;
   }

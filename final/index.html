@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,46 +12,51 @@
   <!-- Title -->
   <title>SASS Workshop</title>
 </head>
+
 <body>  
   <!-- Header -->
   <header class="header">Medellín CSS</header>
+
   <!-- Main Section -->
-  <section class="main-section">
+  <section class="main">
     <img src="./assets/main-image.png" alt="Main Image">
   </section>
+
   <!-- Search Section -->
-  <section class="search-section">
-    <div class="search-section-title">Search</div>
-    <div class="search-section-input">
+  <section class="search">
+    <div class="search__title">Search</div>
+    <div class="search__input">
       <i class="fas fa-search"></i>
       <input type="text" placeholder="SEARCH YOUR ANIMAL">
     </div>
   </section>
-  <!-- Crab Section -->
-  <section class="crab-section">
-    <!-- TODO: Change class names -->
-    <img class="crab-section-1" src="./assets/crab.png" alt="Crab">
-    <div class="crab-section-2">
+
+  <!-- Primary Section -->
+  <section class="ps">
+    <img class="ps__img--primary" src="./assets/crab.png" alt="Crab">
+    <div class="ps__description--primary">
       <p>Cangrejos<br>para todos</p>
     </div>
-    <img class="crab-section-3" src="./assets/butterfly.png" alt="Butterfly">
-    <div class="crab-section-4" class="crab-section-description">
+    <img class="ps__img--secondary" src="./assets/butterfly.png" alt="Butterfly">
+    <div class="ps__description--secondary">
       <p>Mariposas</p>
     </div>
   </section>
-  <!-- Cat Section -->
-  <section class="cat-section">
-    <img class="cat-section-1" src="./assets/cat.png" alt="Cat">
-    <div class="cat-section-2">
-      <div class="cat-section-2-1">
+
+  <!-- Secondary Section -->
+  <section class="ss">
+    <img class="ss__img--primary" src="./assets/cat.png" alt="Cat">
+    <div class="ss__container">
+      <div class="ss__description--primary">
         <p>Gatos<br>Majestuosos</p>
       </div>
-      <img class="cat-section-2-2" src="./assets/deer.png" alt="Deer">
-      <div class="cat-section-2-3">
+      <img class="ss__img--secondary" src="./assets/deer.png" alt="Deer">
+      <div class="ss__description--secondary">
         <p>Ciervooos</p>
       </div>
     </div>
   </section>
+
   <!-- Footer -->
   <footer class="footer">
     <p>
